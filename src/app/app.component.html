@@ -1,0 +1,21 @@
+<div >
+  
+  <h1>Angular Google Map Multiple Markers Example - HDTuto.com</h1>
+  
+    <agm-map 
+       [latitude]='lat' 
+       [longitude]='long'
+       [zoom]='zoom'
+       >
+        
+        <agm-marker 
+            *ngFor="let marker of markers" 
+            [latitude]="marker.lat" 
+              [longitude]="marker.lng">    
+                  <agm-info-window #infoWindow>
+                      {{ marker.label }}
+                </agm-info-window>
+        </agm-marker>
+        
+    </agm-map>
+</div>
